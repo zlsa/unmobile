@@ -1,4 +1,6 @@
 
+@import "popup.css";
+
 /* #e63 */
 
 * {
@@ -12,50 +14,80 @@
 }
 
 html {
-    background: transparent url(../images/background.png) repeat;
-    font-family: "Roboto", sans-serif;
+    background: #e63 url(../images/background.png) repeat;
+    background: #eee;
+    font-family: "Roboto Condensed", "Roboto", sans-serif;
     color: #666;
-    padding: 5px;
+    padding: 0 5px;
     width: 20em;
     text-shadow: 0 1px #fff;
     font-size: 90%;
 }
 
-html.blocked {
-    background-color: #a64;
+#block-features {
+    border-left: 1px solid #bbb;
+    margin-left: 35px;
 }
 
-html.allowed {
-    background-color: #4a6;
-}
-
-#block-types li {
+#block-features li {
     display: block;
     list-style-type: none;
     border-radius: 2px;
-    padding: 5px 20px;
+    padding: 10px 10px;
     position: relative;
     height: 20px;
 }
 
-#block-types li:hover {
-    background-color: rgba(0,0,0,0.05);
+#block-features li .number {
+    position: absolute;
+    left: -38px;
+    color: #999;
+    width: 30px;
+    text-align: center;
+}
+
+#block-features li .number .blocked:after {
+    display: inline-block;
+    content: "/";
+    margin-right: -3px;
+}
+
+#block-features li .number.blocked * {
+    color: #e63;
+    font-weight: bold;
+}
+
+#domain {
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #bbb;
+}
+
+.options {
+    /* box-shadow: 0 1px 0 #fff; */
+    /* border: 1px solid #bbb; */
+    border-radius: 5px;
+    padding: 0 1px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.options span {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    display: inline-block;
+    margin: 1px 0;
+}
+
+.options span:hover {
     cursor: pointer;
 }
 
-#block-types li+li {
-    border-top: 1px dashed rgba(0,0,0,0.25);
+.options span img {
+    display: block;
+    opacity: 0.1;
 }
 
-.url {
-    color: #444;
+.options span.active img {
+    opacity: 0.8;
 }
-
-html.blocked .mode {
-    color: #a64;
-}
-
-html.allowed .mode {
-    color: #4a6;
-}
-

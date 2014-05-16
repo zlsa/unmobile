@@ -13,7 +13,7 @@ var redirect_list=[
     replace:"reddit.com"
   },
   {
-    name:"mobile_prefix",
+    name:"mobile-prefix",
     match:"mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
     replace:"$1"
   }
@@ -24,18 +24,25 @@ var update_interval=60*60*24; // every day
 
 function update_redirect_list() {
   var last_update=Math.floor(localStorage["last-update"]||0);
-  if(time()-last_update > update_interval) {
+  if(time()-last_update > update_interval || !("redirect-list" in localStorage)) {
     var req=new XMLHttpRequest();
-    req.open("GET",redirect_list_url,false);
-    req.onload=function() {
-      console.log(this);
-      var data=this.responseText;
-      localStorage["redirect"]=data;
-      redirect_list=JSON.parse(data).list;
-      localStorage["last-update"]=time();
-      console.log("successfully updated redirect list");
+    req.onreadystatechange=function() {
+      if(this.readyState == XMLHttpRequest.DONE) {
+        if(this.status == 200) {
+          var data=this.responseText;
+          localStorage["redirect-list"]=data;
+          redirect_list=JSON.parse(data);
+          localStorage["last-update"]=Math.floor(time());
+          console.log("successfully updated redirect list");
+        } else {
+          console.log("failed to update redirect list; got http status "+this.status);
+        }
+      }
     };
-    req.send(null);
+    req.open("GET",redirect_list_url,true);
+    req.send();
+  } else {
+    redirect_list=JSON.parse(localStorage["redirect-list"]);
   }
 }
 
@@ -44,7 +51,6 @@ function time() {
 }
 
 chrome.tabs.onUpdated.addListener(function(tab_id,info,tab) {
-  update_redirect_list();
   if(inhibit[tab_id] && inhibit[tab_id] > 0)
     return;
   var url=tab.url;
@@ -54,4 +60,7 @@ chrome.tabs.onUpdated.addListener(function(tab_id,info,tab) {
       inhibit[tab_id]+=1;
     chrome.tabs.update(tab_id,{url:new_url});
   }
+  update_redirect_list();
 });
+
+update_redirect_list();

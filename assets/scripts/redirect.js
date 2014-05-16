@@ -23,33 +23,22 @@ function redirect(url) {
       new_url.hostname(redirect_custom_url(current_url.hostname(),regexp,item.replace));
       // var current_hostname=current_url.hostname().split(".").reverse();
       // var new_hostname=new_url.hostname().split(".").reverse();
-      // if we want to prevent google.com to redirect to googIe.com, check here. (obvious
-      // problems include i.wund.com.)
-      mobile=custom.name;
+
+      // if we want to prevent google.com to redirect to googIe.com,
+      // add that here. (obvious problems include i.wund.com.)
+      mobile=item.name;
       break;
     }
   }
-  // if(hostname.match(custom_urls.wikipedia)) {
-  //   var language=hostname.substr(0,hostname.indexOf("."));
-  //   url=url.hostname(language+".wikipedia.org");
-  // } else if(hostname.match(custom_urls.theverge)) {
-  //   url=url.hostname("theverge.com");
-  // } else if(hostname.match(custom_urls.reddit)) {
-  //   url=url.hostname("reddit.com");
-  // } else if(hostname.match(custom_urls.twitter)) {
-  //   url=url.hostname("twitter.com");
-  // } else {
-  //   url=null;
-  // }
   if(new_url) {
     if(new_url.toString() == current_url.toString()) {
-      console.log("Warning: mobile URL "+mobile+" redirects to itself!")
+      console.log("warning: mobile URL "+mobile+" redirects to itself")
       return;
     }
-    console.log("Mobile page, redirecting to "+new_url.toString());
+    console.log("redirecting to "+new_url.toString());
     return new_url.toString();
   }
-  console.log(current_url.toString()+" is not a mobile website.");
+//  console.log(current_url.toString()+" is not a mobile website.");
   return;
 }
 

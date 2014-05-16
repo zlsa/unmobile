@@ -2,27 +2,64 @@
 @import "header.css";
 
 * {
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
 }
 
 html {
-    background: #eee;
-    font-family: "Roboto Condensed", "Roboto", sans-serif;
-    color: #444;
-    padding: 0 5px;
-    font-size: 90%;
-    border-top: 3px solid #b00;
+  background: #eee;
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  color: #444;
+  padding: 0 5px;
+  font-size: 90%;
+  border-top: 3px solid #b00;
 }
 
 body {
-    width: 50%;
-    margin: 0 auto;
+  width: 100%;
+  padding: 0 1em;
+}
+
+#redirect-list li {
+  list-style-type: none;
+  padding: 0.3em 0;
+}
+
+#redirect-list li span {
+  padding: 0 1em;
+  display: inline-block;
+}
+
+#redirect-list li .name {
+  width: 20%;
+}
+
+#redirect-list li .matches {
+  width: 50%;
+}
+
+#redirect-list li#header {
+  border-bottom: 2px solid #aaa;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+#redirect-list li#header span {
+  font-weight: bold;
+}
+
+#redirect-list .item .name {
+  color: #384;
+  font-weight: bold;
+}
+
+#redirect-list .item .name,
+#redirect-list .item .matches,
+#redirect-list .item .replace {
+  font-family: monoOne, monospace;
 }

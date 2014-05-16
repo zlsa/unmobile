@@ -24,6 +24,7 @@
 
   "permissions":[
     "tabs",
-    "http://raw.githubusercontent.com/zlsa/unmobile/master/redirect.json"
+    "http://raw.githubusercontent.com/zlsa/unmobile/master/redirect.json",
+    "https://raw.githubusercontent.com/zlsa/unmobile/master/redirect.json"
   ]
 }

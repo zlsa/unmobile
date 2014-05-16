@@ -5,7 +5,7 @@
     "replace":"$1.wikipedia.org"
   },
   {
-    "name":"wikipedia",
+    "name":"reddit",
     "match":"i\\.reddit\\.com",
     "replace":"reddit.com"
   },

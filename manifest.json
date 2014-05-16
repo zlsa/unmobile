@@ -23,6 +23,7 @@
   "options_page":"options.html",
 
   "permissions":[
-    "tabs"
+    "tabs",
+    "http://raw.githubusercontent.com/zlsa/unmobile/master/redirect.json"
   ]
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "name":"wikipedia",
+    "match":"^(.{2,3})\\.m\\.wikipedia\\.org$",
+    "replace":"$1.wikipedia.org"
+  },
+  {
+    "name":"wikipedia",
+    "match":"i\\.reddit\\.com",
+    "replace":"reddit.com"
+  },
+  {
+    "name":"mobile_prefix",
+    "match":"mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
+    "replace":"$1"
+  }
+]

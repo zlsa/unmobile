@@ -1,22 +1,4 @@
 
-var custom_urls=[
-  {
-    name:"wikipedia",
-    match:"^(.{2,3})\\.m\\.wikipedia\\.org$",
-    replace:"$1.wikipedia.org"
-  },
-  {
-    name:"wikipedia",
-    match:"i\\.reddit\\.com",
-    replace:"reddit.com"
-  },
-  {
-    name:"mobile_prefix",
-    match:"mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
-    replace:"$1"
-  }
-];
-
 function redirect_custom_url(hostname,regexp,replace) {
   // accepts a hostname (en.m.wikipedia.org for example) and returns the replaced hostname
   // (en.wikipedia.org).
@@ -33,12 +15,12 @@ function redirect(url) {
   var current_url=new URI(url);
   var new_url=null;
   var mobile=null;
-  for(var i=0;i<custom_urls.length;i++) {
-    var custom=custom_urls[i];
-    var regexp=new RegExp(custom.match);
+  for(var i=0;i<redirect_list.length;i++) {
+    var item=redirect_list[i];
+    var regexp=new RegExp(item.match);
     if(current_url.hostname().match(regexp)) {
       new_url=new URI(url);
-      new_url.hostname(redirect_custom_url(current_url.hostname(),regexp,custom.replace));
+      new_url.hostname(redirect_custom_url(current_url.hostname(),regexp,item.replace));
       // var current_hostname=current_url.hostname().split(".").reverse();
       // var new_hostname=new_url.hostname().split(".").reverse();
       // if we want to prevent google.com to redirect to googIe.com, check here. (obvious

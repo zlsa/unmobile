@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Unmobile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Unmobile</h1>
+    </header>
+    <aside>
+      <div id="download"><a href="https://github.com/zlsa/unmobile/blob/master/unmobile.crx?raw=true">Download</a></div>
+      <div id="fork"><a href="http://github.com/zlsa/unmobile/">Fork on GitHub</a></div>
+    </aside>
+    <main>
+      <section id="what-it-does">
+        <header>
+          <h1>What it does</h1>
+        </header>
+        <p>Unmobile is a Chrome extension that automatically redirects
+          from mobile websites (such as
+          <code>http://en.m.wikipedia.org/wiki/SpaceX</code>) to the
+          desktop countertop
+          (<code>http://en.wikipedia.org/wiki/SpaceX</code>; note the
+          missing &lsquo;m&rsquo;).
+        </p>
+      </section>
+      <section id="installation">
+        <header>
+          <h1>Installation</h1>
+        </header>
+        <p>
+          <ol>
+            <li>Navigate to chrome:extensions or click the three bars, Tools, then Extensions.</li>
+            <li>Download the extension
+              <a href="https://github.com/zlsa/unmobile/blob/master/unmobile.crx?raw=true">here</a>.</li>
+            <li>Drag the downloaded file into the Extensions tab.</li>
+            <li>???</li>
+            <li>PROFIT (without mobile websites)</li>
+          </ol>
+        </p>
+      </section>
+      <section id="security-privacy">
+        <header>
+          <h1>Security/Privacy</h1>
+        </header>
+        <p>At any time, you can see the list Unmobile is currently
+          using (in an Extensions tab, find Unmobile, then click
+          Options) or the master list (in the GitHub repository; it's
+          named <code>redirect.json</code>). The redirect list can
+          only redirect you based on the hostname; it can only tell
+          when you go to <code>google.com</code>, not
+          <code>http://www.google.com/search?q=pics+of+cats</code>. There
+          is no dynamic or downloaded JS; it's all done using regular
+          expression replacements.</p>
+        <p>Unfortunately, there's nothing preventing Unmobile from
+          redirecting to different domain names (for example, a bad
+          list entry could claim <code>google.com</code> is a mobile
+          website and redirect
+          to <code>not-evil-google.ru</code>. This cannot be prevented
+          because many legitimate websites use different URLs for
+          mobile and non-mobile websites (for example, Weather
+          Underground's mobile website is <code>i.wund.com</code>
+          while the desktop site is at
+          <code>wunderground.com</code>).</p>
+        <p>Your local copy of the redirect list is automatically
+          updated once a day; you can also force an update in
+          Unmobile's options.</p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; Copyright 2014 Jon Ross (zlsa). All content on this
+        page is released under
+        the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+        Commons Attribution 3.0</a> license.
+      </p>
+    </footer>
+  </body>
+</html>

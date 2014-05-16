@@ -1,0 +1,208 @@
+
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  color: inherit;
+  text-decoration: inherit;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+body {
+  line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+nav ul {
+  list-style:none;
+}
+blockquote, q {
+  quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+input, select {
+  vertical-align:middle;
+}
+
+html, body {
+  width: 100%;
+}
+
+html {
+  font-size: 90%;
+  color: #555;
+  font-family: Roboto, sans-serif;
+  height: 100%;
+  background-color: #eee;
+}
+
+body {
+  width: 100%;
+  max-width: 640px;
+  margin: 1em auto;
+  line-height: 150%;
+}
+
+body>* {
+
+}
+
+body>header {
+  margin-top: 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+body>header>h1 {
+  font-family: "Exo 2", Exo, serif;
+  font-size: 200%;
+  margin: 1em 2em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+section {
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  position: relative;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+section>header {
+  position: absolute;
+  left: 0;
+  width: 20em;
+  margin-left: -20em;
+  padding: 0 1em;
+  text-align: right;
+}
+
+section>header>h1 {
+  font-weight: normal;
+  font-style: italic;
+  color: #777;
+  text-shadow: 0 1px 0 #fff;
+}
+
+section ol {
+  margin-left: 1.5em;
+}
+
+p+p {
+  margin-top: 1em;
+  text-indent: 2em;
+}
+
+code {
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #ccc;
+  padding: 1px 3px;
+  margin: 0 1px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+footer {
+  color: #888;
+  font-size: 90%;
+  margin: 1em 2em;
+  margin-bottom: 2em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+aside {
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+aside div {
+  border-radius: 3px 0 0 3px;
+  background-color: #e55;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+aside a {
+  font-family: "Exo 2", Exo, serif;
+  padding: 5px 1em;
+  margin-top: 1em;
+  color: #f8f8f8;
+  font-weight: bold;
+  border-radius: 3px 0 0 3px;
+  display: block;
+  text-align: center;
+}
+
+aside #fork {
+  background-color: #666;
+}
+
+aside div a:hover {
+  color: #fff;
+}
+

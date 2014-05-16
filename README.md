@@ -44,5 +44,4 @@ and PNG) are distributed; to regenerate the PNG images, run
 
 # License
 
-CC-BY 3.0.
-
+Unmobile is released under the MIT license.

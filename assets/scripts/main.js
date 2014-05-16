@@ -9,7 +9,7 @@ function generate_redirect_list() {
   $("#redirect-list").append("<li id='header'>"+
                              "<span class='name'>Name of filter</span>"+
                              "<span class='matches'>Mobile hostname</span>"+
-                             "<span class='replace'>Non-mobile hostname</span>"+
+                             "<span class='replace'>Non-mobile replacement</span>"+
                              "</li>");
   for(var i=0;i<redirect_list.length;i++) {
     var item=redirect_list[i];
@@ -21,6 +21,29 @@ function generate_redirect_list() {
   }
 }
 
+var tt=null;
+
 $(document).ready(function() {
+  $("#update-list").click(function() {
+    $("html").addClass("updating");
+    $("#update-list").text("Updating...");
+    if(tt)
+      clearTimeout(tt);
+    update_redirect_list(function(status) {
+      $("html").removeClass("updating");
+      generate_redirect_list();
+      if(status == "ok") {
+        $("#update-list").text("Updated.");
+        tt=setTimeout(function() {
+          $("#update-list").text("Update list");
+          tt=null;
+        },10000);
+      } else if(status == "fail") {
+        $("#update-list").text("Failed to update list");
+      } else if(status == "pass") {
+        $("#update-list").text("Oops, please file an issue on GitHub...");
+      }
+    },true);
+  });
   generate_redirect_list();
 });

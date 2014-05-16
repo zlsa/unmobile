@@ -8,7 +8,7 @@
   font-size: 100%;
   margin: 0;
   padding: 0;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 html {
@@ -25,7 +25,30 @@ body {
   padding: 0 1em;
 }
 
+#update-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 1.2em;
+  padding: 1em;
+}
+
+#update-list:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#redirect-list {
+  transition: opacity 0.2s ease;
+}
+
+html.updating #redirect-list {
+  opacity: 0.3;
+}
+
 #redirect-list li {
+  border-bottom: 1px solid #ddd;
   list-style-type: none;
   padding: 0.3em 0;
 }
@@ -40,13 +63,13 @@ body {
 }
 
 #redirect-list li .matches {
-  width: 50%;
+  width: 40%;
 }
 
 #redirect-list li#header {
   border-bottom: 2px solid #aaa;
   padding: 1em 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.3em;
 }
 
 #redirect-list li#header span {

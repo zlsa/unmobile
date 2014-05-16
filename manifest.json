@@ -14,6 +14,7 @@
   "background": {
     "scripts":[
       "assets/scripts/url.js",
+      "assets/scripts/list.js",
       "assets/scripts/redirect.js",
       "assets/scripts/background.js"
     ],

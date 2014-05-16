@@ -112,6 +112,10 @@ body>* {
 
 }
 
+a[href] {
+  color: #37d;
+}
+
 body>header {
   margin-top: 2em;
   border-bottom: 1px solid #ddd;
@@ -183,26 +187,24 @@ aside {
 
 aside div {
   border-radius: 3px 0 0 3px;
-  background-color: #e55;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  opacity: 0.8;
+  transition: opacity 0.1s ease;
+  background-color: #666;
 }
 
 aside a {
   font-family: "Exo 2", Exo, serif;
   padding: 5px 1em;
   margin-top: 1em;
-  color: #f8f8f8;
+  color: #fff !important;
   font-weight: bold;
   border-radius: 3px 0 0 3px;
   display: block;
   text-align: center;
 }
 
-aside #fork {
-  background-color: #666;
-}
-
-aside div a:hover {
-  color: #fff;
+aside div:hover {
+  opacity: 1;
 }
 

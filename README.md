@@ -32,7 +32,15 @@ the latest list from GitHub (see redirect.json).
 # Contributing
 
 If you have any contributions to the codebase or the redirect list,
-fork and submit a pull request. Thanks!
+fork and submit a pull request.
+
+## Quirks
+
+`unmobile.crx` (the actual Chrome extension) is stored in this
+repository; if you submit a pull request, you shouldn't update this
+file (since it's signed with my private key). The icon files (both SVG
+and PNG) are distributed; to regenerate the PNG images, run
+`convert.sh` in `assets/images/`.
 
 # License
 

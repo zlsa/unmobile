@@ -13,16 +13,23 @@
 
 html {
   background: #eee;
-  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  font-family: "Exo 2", Exo, sans-serif;
   color: #444;
   padding: 0 5px;
   font-size: 90%;
-  border-top: 3px solid #b00;
 }
 
 body {
-  width: 100%;
+  width: 80%;
+  margin: 1em auto;
+}
+
+main {
+  background: #fff;
   padding: 0 1em;
+  padding-bottom: 0.5em;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 #update-list {
@@ -30,7 +37,6 @@ body {
   top: 0;
   right: 0;
   display: block;
-  margin: 1.2em;
   padding: 1em;
 }
 
@@ -51,6 +57,12 @@ html.updating #redirect-list {
   border-bottom: 1px solid #ddd;
   list-style-type: none;
   padding: 0.3em 0;
+  vertical-align: middle;
+  height: 2em;
+}
+
+#redirect-list li:last-child {
+  border-bottom: none;
 }
 
 #redirect-list li span {
@@ -67,9 +79,9 @@ html.updating #redirect-list {
 }
 
 #redirect-list li#header {
-  border-bottom: 2px solid #aaa;
   padding: 1em 0;
   margin-bottom: 0.3em;
+  height: auto;
 }
 
 #redirect-list li#header span {

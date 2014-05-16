@@ -1,17 +1,16 @@
 
 var defaults={
     policies:["global","allow","block"],
-    features:["canvas","webgl","webaudio"],
+    features:["canvas","webgl"],
+//    features:["canvas","webgl","webaudio"],
     domain:{
-        webgl:"block",
-        canvas:"block",
-        webaudio:"block",
+        webgl:"global",
+        canvas:"global",
     },
     options:{
         features:{
             webgl:"block",
             canvas:"block",
-            webaudio:"block",
         }
     }
 };
@@ -77,3 +76,4 @@ function get_domain(url) {
         domain="chrome";
     return domain;
 }
+

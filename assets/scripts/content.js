@@ -1,8 +1,14 @@
 
 function inject_blocker(blocked_features) {
+    var webaudio_block="";
+    if(blocked_features.indexOf("webaudio") > -1) {
+        webaudio_block+="window.AudioContext=html5_block.audioContext;";
+        webaudio_block+="window.webkitAudioContext=html5_block.audioContext;";
+    }
     var embed=[
         "html5_block={};",
         "html5_block.canvas_getContext=HTMLCanvasElement.prototype.getContext;",
+        "html5_block.audioContextOriginal=window.AudioContext || window.webkitAudioContext;",
         "html5_block.features=['"+blocked_features.join("','")+"'];",
         "html5_block.number={canvas:0,webgl:0,webaudio:0}",
         "html5_block.total={canvas:0,webgl:0,webaudio:0}",
@@ -28,7 +34,23 @@ function inject_blocker(blocked_features) {
         "    return(null);",
         "  return(html5_block.canvas_getContext.apply(this,arguments));",
         "};",
-        ""
+        "html5_block.audioContext=function() {",
+        "  html5_block.total.webaudio+=1;",
+        "  var blocked=false;",
+        "  if(html5_block.features.indexOf('webaudio') > -1) {",
+        "    blocked=true;",
+        "    html5_block.number.webaudio+=1;",
+        "  }",
+        "  window.postMessage({type:'NUMBER',text:JSON.stringify([",
+        "    html5_block.number,",
+        "    html5_block.total",
+        "  ])},'*');",
+        "  if(blocked) {",
+        "    throw new Error('UnsupportedFeature: WebAudio has been blocked by HTML5 block')",
+        "  }",
+        "  return html5_block.audioContextOriginal.apply(this,arguments);",
+        "};",
+        webaudio_block
     ].join("\n");
 
     var script=document.createElement("script");

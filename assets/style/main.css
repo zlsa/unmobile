@@ -1,7 +1,5 @@
 
-@import "popup.css";
-
-/* #e63 */
+@import "header.css";
 
 * {
     color: inherit;
@@ -10,84 +8,21 @@
     margin: 0;
     padding: 0;
     vertical-align: bottom;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 
 html {
-    background: #e63 url(../images/background.png) repeat;
     background: #eee;
     font-family: "Roboto Condensed", "Roboto", sans-serif;
-    color: #666;
+    color: #444;
     padding: 0 5px;
-    width: 20em;
-    text-shadow: 0 1px #fff;
     font-size: 90%;
+    border-top: 3px solid #b00;
 }
 
-#block-features {
-    border-left: 1px solid #bbb;
-    margin-left: 35px;
-}
-
-#block-features li {
-    display: block;
-    list-style-type: none;
-    border-radius: 2px;
-    padding: 10px 10px;
-    position: relative;
-    height: 20px;
-}
-
-#block-features li .number {
-    position: absolute;
-    left: -38px;
-    color: #999;
-    width: 30px;
-    text-align: center;
-}
-
-#block-features li .number .blocked:after {
-    display: inline-block;
-    content: "/";
-    margin-right: -3px;
-}
-
-#block-features li .number.blocked * {
-    color: #e63;
-    font-weight: bold;
-}
-
-#domain {
-    margin-bottom: 5px;
-    border-bottom: 1px dotted #bbb;
-}
-
-.options {
-    /* box-shadow: 0 1px 0 #fff; */
-    /* border: 1px solid #bbb; */
-    border-radius: 5px;
-    padding: 0 1px;
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
-
-.options span {
-    border-radius: 3px;
-    border: 1px solid transparent;
-    display: inline-block;
-    margin: 1px 0;
-}
-
-.options span:hover {
-    cursor: pointer;
-}
-
-.options span img {
-    display: block;
-    opacity: 0.1;
-}
-
-.options span.active img {
-    opacity: 0.8;
+body {
+    width: 50%;
+    margin: 0 auto;
 }

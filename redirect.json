@@ -15,12 +15,12 @@
     "replace":"reddit.com"
   },
   {
-    "name":"mobile_prefix",
+    "name":"mobile-prefix",
     "match":"mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
     "replace":"$1"
   },
   {
-    "name":"m_prefix",
+    "name":"m-prefix",
     "match":"m\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
     "replace":"$1"
   }

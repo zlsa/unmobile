@@ -6,12 +6,13 @@ mobile websites (such as http://en.m.wikipedia.org/wiki/SpaceX) to the
 desktop countertop (http://en.wikipedia.org/wiki/SpaceX, note the
 missing 'm').
 
-# [Download]()
+# [Download](https://github.com/zlsa/unmobile/blob/master/unmobile.crx?raw=true)
 
 To install, follow these steps:
 
 1. Navigate to `chrome:extensions`
-2. Download the extension [here]()
+2. Download the extension from
+   [here](https://github.com/zlsa/unmobile/blob/master/unmobile.crx?raw=true)
 3. Drag the downloaded file into the `chrome:extensions` tab
 4. ???
 5. PROFIT

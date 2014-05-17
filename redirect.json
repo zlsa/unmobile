@@ -11,17 +11,17 @@
   },
   {
     "name":"reddit",
-    "match":"i\\.reddit\\.com",
+    "match":"^i\\.reddit\\.com",
     "replace":"reddit.com"
   },
   {
     "name":"mobile-prefix",
-    "match":"mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
+    "match":"^mobile\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
     "replace":"$1"
   },
   {
     "name":"m-prefix",
-    "match":"m\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
+    "match":"^m\\.(([a-zA-Z0-9\\-_]+\\.)+([a-zA-Z0-9\\-_]+))",
     "replace":"$1"
   }
 ]

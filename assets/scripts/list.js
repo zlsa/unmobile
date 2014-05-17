@@ -31,9 +31,17 @@ function update_redirect_list(callback,force) {
         if(this.status == 200) {
           var data=this.responseText;
           localStorage["redirect-list"]=data;
-          redirect_list=JSON.parse(data);
-          localStorage["last-update"]=Math.floor(time());
+          var list=JSON.parse(data);
           console.log("successfully updated redirect list");
+          if(typeof list == typeof []) {
+            redirect_list=list;
+            localStorage["last-update"]=Math.floor(time());
+          } else if(typeof list == typeof {}) {
+            redirect_list=list.list;
+            localStorage["last-update"]=Math.floor(time());
+          } else {
+            break;
+          }
           callback("ok");
         } else {
           console.log("failed to update redirect list; got http status "+this.status);

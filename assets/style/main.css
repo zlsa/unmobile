@@ -32,14 +32,17 @@ main {
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
+#report-bug,
 #update-list {
   position: absolute;
   top: 0;
   right: 0;
   display: block;
   padding: 1em;
+  text-decoration: none;
 }
 
+#report-bug:hover,
 #update-list:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -97,4 +100,12 @@ html.updating #redirect-list {
 #redirect-list .item .matches,
 #redirect-list .item .replace {
   font-family: monoOne, monospace;
+}
+
+#report-bug {
+  position: fixed !important;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
 }

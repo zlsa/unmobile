@@ -29,6 +29,13 @@ the new URL.
 Every day, Unmobile will attempt to download and update itself with
 the latest list from GitHub (see redirect.json).
 
+# Changelog
+
+## 0.0.5 (May 16, 2014)
+
+* Fixed regular expression bug. Update your block list to get the fixed version.
+* Added button in Options page to report bug.
+
 # Contributing
 
 If you have any contributions to the codebase or the redirect list,

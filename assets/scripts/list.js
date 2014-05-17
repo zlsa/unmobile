@@ -40,7 +40,7 @@ function update_redirect_list(callback,force) {
             redirect_list=list.list;
             localStorage["last-update"]=Math.floor(time());
           } else {
-            break;
+            return;
           }
           callback("ok");
         } else {

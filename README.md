@@ -31,6 +31,10 @@ the latest list from GitHub (see redirect.json).
 
 # Changelog
 
+## 0.0.7 (May 17, 2014)
+
+* Added auto-update
+
 ## 0.0.6 (May 17, 2014)
 
 * Fixed `break`/`return` bug, thanks to Ollie Terrance.

@@ -31,6 +31,10 @@ the latest list from GitHub (see redirect.json).
 
 # Changelog
 
+## 0.0.6 (May 17, 2014)
+
+* Fixed `break`/`return` bug, thanks to Ollie Terrance.
+
 ## 0.0.5 (May 16, 2014)
 
 * Fixed regular expression bug. Update your block list to get the fixed version.

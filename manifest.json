@@ -2,6 +2,7 @@
   "manifest_version":2,
   "name":"Unmobile",
   "version":"0.0.6",
+  "update_url":"http://raw.githubusercontent.com/zlsa/unmobile/master/redirect.json",
 
   "description":"Redirects to the non-mobile version of websites.",
 

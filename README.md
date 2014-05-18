@@ -34,6 +34,10 @@ the latest list from GitHub (see redirect.json).
 ## 0.0.6 (May 17, 2014)
 
 * Fixed `break`/`return` bug, thanks to Ollie Terrance.
+* Fixed potential duplicate listeners bug
+* Forced list download on install/update/chrome update (previously
+  would download only when you first visited a website; it wouldn't
+  work the first time.)
 
 ## 0.0.5 (May 16, 2014)
 
